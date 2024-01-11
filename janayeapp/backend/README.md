@@ -1,2 +1,0 @@
-# janayeworld
-janaye's website
