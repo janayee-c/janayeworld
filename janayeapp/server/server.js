@@ -1,9 +1,16 @@
 const express = require('express')
-const app = express()
+const cors = require('cors');
+const app = express();
+const projectRoutes = require('../server/routes/projectRoutes')
+
+app.use(cors());  
+
+
+
+//defining HTTP requests 
 
 app.get("/api", (req, res) => {
-    res.json({"users": ["userOne", "userTwo", "userThree"]})
-    //handling API logic 
-})
+    res.json({"users": ["userOne", "userTwo", "userThree"]});
+});
 
-app.listen(5000, () => {console.log("Server started on port 5000")})
+app.listen(5000, () => {console.log("Server is running on port 5000!")})
