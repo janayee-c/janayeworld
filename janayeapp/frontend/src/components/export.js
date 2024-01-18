@@ -5,6 +5,7 @@ import Projects from "./Projects";
 import ProfileCard from "./ProfileCard";
 import Skills from "./Skills";
 import SplashScreen from "./SplashScreen";
+import Heading from "./Heading";
 export {
     SplashScreen,
     Contact,
@@ -12,5 +13,6 @@ export {
     Navbar,
     Projects,
     ProfileCard,
-    Skills
+    Skills,
+    Heading
 }

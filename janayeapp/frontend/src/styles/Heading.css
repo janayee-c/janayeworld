@@ -1,0 +1,23 @@
+.web-heading {
+    font-family: "Larsseit";
+    font-size: 1.7rem;
+    padding: 20px;
+    padding-top:0px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    z-index: 150; 
+    float: center;
+  }
+  
+  @media (max-width: 800px) {
+    .web-heading {
+    font-size: 1.2rem; 
+    letter-spacing: 0px;
+    }
+  }
+  
+  
+  .centered {
+    text-align: center;
+  }
+  

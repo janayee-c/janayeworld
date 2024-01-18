@@ -1,10 +1,18 @@
 import './styles/App.css';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Homepage from './pages/Homepage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-  // ... other code
+  const [backendData, setBackendData] = useState([{}]);
+
+
+  useEffect(() => {
+    fetch("/api").then(response => response.json()).then(data => {
+      console.log(data);
+      setBackendData(data);
+    }).catch(error => console.log(error));
+  }, []) 
 
   return (
     <BrowserRouter>

@@ -3,7 +3,6 @@ import { COLORS } from "./themes";
 
 export {
     COLORS,
-    ABOUT,
     PROJECTTEXTS,
     IDENTITYTEXTS
 }

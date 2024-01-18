@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Larsseit';
+  src: local('Larsseit'), url(../fonts/Larsseit/Larsseit/Larsseit.otf) format('woff2');
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +16,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {/* Define your colors as CSS variables to be used in the stylesheets*/
+  --primary: "#FDFBF6",
+  --oceanblue: '#7EC0EC',
+  --tealgreen: '#81CDD6',
+  --pastelblue: "C8E4F6",
+
+
+  --ponyored: '#81CDD6',
+  --black: "#000000",
+  --white: "#F3F4F8",
 }

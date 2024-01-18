@@ -40,7 +40,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero-section" className="hero-section">
+    <section id="hero-section">
       <div className="me-container">
         <img id="me" src={Me} alt="a picture of me" />
       </div>
