@@ -2,22 +2,67 @@
     width: 100%;
     position: sticky; 
     top:0;
+    padding: 1.25em; 
     height: auto;
     /* min-height: 3rem; */
-    background-color: skyblue; 
+    background-color: var(--navbarblue); 
 }
 
-.slink, 
-.color-navy {
+.selected {
+    font-size: 2.5em;
+    color: var(--ponyored)
+
+}
+
+.idle {
+    font-size: 2.5em;
+    color: var(--black)
+}
+
+.slink {
+    color: var(--primary);
     font-family: 'Larsseit';
-    font-weight: 500;
-    font-size: 2.0rem;
-    padding-top: 0.5rem;
-    text-indent: 1.25rem;
+    font-weight: 400;
+    text-indent: 1.25em;
+    font-size: 1.3rem; /* Default font size */
+    justify-self: right;
 }
 
-.corner-link {
-    justify-content: right;
+/* For extra small screens */
+@media (max-width: 575px) {
+    .slink {
+        font-size: 2em; 
+    }
 }
 
+/* For medium screens */
+@media (min-width: 768px) {
+    .slink {
+        font-size: 1.5em;
+    }
+}
 
+/* For large screens */
+@media (min-width: 992px) {
+    .slink {
+        font-size: 1.75em; /* Corrected syntax */
+    }
+}
+
+.my-navbar {
+    padding: 1rem; /* Default padding */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .my-navbar {
+        padding: 1.5rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .my-navbar {
+        padding: 1.3rem;
+    }
+}

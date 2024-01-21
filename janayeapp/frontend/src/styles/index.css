@@ -19,13 +19,26 @@ code {
 }
 
 :root {/* Define your colors as CSS variables to be used in the stylesheets*/
-  --primary: "#FDFBF6",
-  --oceanblue: '#7EC0EC',
-  --tealgreen: '#81CDD6',
-  --pastelblue: "C8E4F6",
+  --primary: #FDFBF6;
+  --navbarblue: #12A3B7;
+  --oceanblue: #7EC0EC;
+  --tealgreen: #81CDD6;
+  --pastelblue: #C8E4F6;
+  --navyblue: #1e90ff;
 
 
-  --ponyored: '#81CDD6',
-  --black: "#000000",
-  --white: "#F3F4F8",
+  --ponyored: #FF6D6C;
+  --brightblue: #C5F9FF;
+  --black: #000000;
+  --white: #F3F4F8;
+
+    /* Media Query Sizes */
+  --screen-xs-max: 575px;
+  --screen-sm-min: 576px;
+  --screen-sm-max: 767px;
+  --screen-md-min: 768px;
+  --screen-md-max: 991px;
+  --screen-lg-min: 992px;
+  --screen-lg-max: 1199px;
+  --screen-xl-min: 1200;
 }

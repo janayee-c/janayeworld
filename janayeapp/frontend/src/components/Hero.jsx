@@ -1,4 +1,4 @@
-import { Container, useMediaQuery } from '@chakra-ui/react';
+import { Container, useMediaQuery, Flex } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import '../styles/Hero.css';
 import { Me, Blur} from '../images/export.js';
@@ -14,11 +14,13 @@ const Hero = () => {
 
     if (isMinimizedMode) {
       if (scrollY > prevScrollY) {
-        // Scrolling down, translate the cube by 20px
+        // Scrolling down, translate the image up by 20px
+        
         meElement.style.transform = 'translateY(-80px)';
+
         setScrollDirection('down');
       } else {
-        // Scrolling up, reset the cube to its normal position
+        // Scrolling up, reset the image to its normal position
         meElement.style.transform = 'translateY(0)';
         setScrollDirection('up');
       }
@@ -41,9 +43,13 @@ const Hero = () => {
 
   return (
     <section id="hero-section">
-      <div className="me-container">
+      <Flex 
+      className="me-container"
+      flexDirection={'row'}
+      justifyContent="flex-start"
+      >
         <img id="me" src={Me} alt="a picture of me" />
-      </div>
+      </Flex>
       <div className="hero-diag"></div>
     </section>
   );

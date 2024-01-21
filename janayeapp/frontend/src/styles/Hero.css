@@ -2,8 +2,6 @@
 .hero-section {
     position: relative;
     height: auto; 
-    min-height: 34rem; 
-    max-height: 60rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -13,18 +11,25 @@
     margin-bottom: 20px; 
   }
 
-#me {
-    margin-top: 5%;
-    transform: translateY(5%);
-    transition: all 0.3s ease;
-    scale: 1;
-    width: 40rem;
-    height: 40rem;  
-    z-index: 4;
-    position: relative;
-  }
-  
 .me-container {
     position: relative;
-    z-index: 3;
+    z-index: 1;
+}
+
+#me {
+    margin-top: 5%;
+    transform: translateY(10%);
+    transition: all 0.3s ease;
+    scale: 0.8;
+    width: 40rem;
+    height: 40rem;  
+    z-index: 2;
+    position: relative;
   }
+
+@media (min-width: 768px) {
+  #me {
+    scale: 1.2; 
+  }
+}
+  
