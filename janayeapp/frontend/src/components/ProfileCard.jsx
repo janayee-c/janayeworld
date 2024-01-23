@@ -1,9 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Box } from '@chakra-ui/react';
 
 const ProfileCard = () => {
-    <div></div>
- 
-  ;
-};
+  return (
+    <Box id="profile-card">
+
+    </Box>
+  )
+}
 
 export default ProfileCard

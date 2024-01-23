@@ -1,35 +1,124 @@
 
-.hero-section {
+#hero-section {
     position: relative;
+    background-color: primary;
     height: auto; 
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    background-color: #FDFBF6;
     z-index: 1;
-    margin-bottom: 20px; 
+  }
+
+  @media (max-width: 767px) {
+    #hero-section {
+      justify-content: center;
+    }
   }
 
 .me-container {
     position: relative;
     z-index: 1;
+    margin-top: 5%;
+    animation: glow 1s infinite alternate;
+    border-radius: 100%;
 }
+
+
+@media (min-width: 768px) {
+  .me-container {
+    margin-left: 5%; 
+  }
+}
+
+.circle-container {
+  width: 50rem; /* Size of the circle */
+  height: 50rem; /* Equal to width for perfect circle */
+  border-radius: 100%; /* Makes it circular */
+  overflow: hidden; /* Ensures nothing spills outside the circle */
+  position: relative; /* For positioning the image inside */
+  display: flex; /* To center the image inside */
+  justify-content: center;
+  align-items: center;
+}
+
 
 #me {
     margin-top: 5%;
-    transform: translateY(10%);
+    transform: translateY(-5%);
     transition: all 0.3s ease;
-    scale: 0.8;
+    transform: scale(1.2);
     width: 40rem;
     height: 40rem;  
-    z-index: 2;
     position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 575px) {
+    #me {
+      scale: 1.5; 
+      width: 20em; 
+      height: 20em; 
+      transform: translateY(-10%);
+    }
   }
 
 @media (min-width: 768px) {
   #me {
-    scale: 1.2; 
+    scale: 1.25; 
+    transform: translateY(-5%);
   }
 }
-  
+
+.up-down { 
+  animation-name: up-down;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes up-down {
+  0% { transform: translate(0,  0); }
+  50%  { transform: translate(0, 2%); }
+  100%   { transform: translate(0, -0%); }   
+}
+
+
+.overlay-text {
+  font-family: "Larsseit";
+  margin-left: 4rem; 
+  font-size: 2.0rem;
+  font-weight: 400;
+  position: absolute;
+  top: 0;    
+  transform: translate(0%, 40%);
+  z-index: 2; 
+  margin: 1rem;
+  line-height: 4rem;  
+}
+
+@media (max-width: 768px) {
+  .overlay-text {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .overlay-text {
+    font-size: 3rem;
+    transform: translate(0%, -40%)
+  }
+}
+
+
+
+
+@keyframes animateGlow {
+0% {
+  background-position: 0% 50%;
+}
+100% {
+  background-position: 200% 50%;
+}
+}
+

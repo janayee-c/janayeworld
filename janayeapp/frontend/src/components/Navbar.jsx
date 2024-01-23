@@ -57,10 +57,9 @@ const Navbar = () => {
       >
         <Heading title="janaye cheong"></Heading>
         
-        {/* Links */}
         <Stack
           direction="row"
-          spacing={1}
+          spacing="3rem"
           justifyContent="flex-end"
           marginRight="3.25rem"
           marginTop="0"
@@ -69,15 +68,20 @@ const Navbar = () => {
 
           {sections.map((section) => (
             <ScrollLink
-              key={section.id}
-              onMouseEnter={() => handleHover(section.id)}
-              onMouseLeave={() => handleHover(null)}
-              className="slink"
-              to={`${section.id}-section`}
-              smooth={true}
-              offset={-50}
-            >
-              {section.label}
+             key={section.id}
+             onMouseEnter={() => handleHover(section.id)}
+             onMouseLeave={() => handleHover(null)}
+             className={`${
+             activeLink === section.id
+                   ? 'selectedx'
+                  : 'slinkx'
+                  }`}
+             to={`${section.id}-section`}
+            smooth={true}
+            offset={-50}
+            onClick={onClose}
+                >
+            {section.label}
             </ScrollLink>
           ))}
         </Stack>
@@ -103,9 +107,10 @@ const Navbar = () => {
         marginRight="1.0rem">
           <Heading title="janaye cheong"></Heading>
           <IconButton
-
           ref={btnRef}
           icon={<Hamburger
+          toggled={isOpen} 
+          
 
             onToggle={(toggled) => {
               setIsHamburgerToggled(toggled);
@@ -116,7 +121,7 @@ const Navbar = () => {
               }
             }}
 
-            toggled={isHamburgerToggled} 
+            
           />}
           edge="end"
           zIndex={isDesktop ? 1 : 9999}
@@ -154,7 +159,7 @@ const Navbar = () => {
                   direction="column"
                   spacing="3rem"
                   align="center"
-                  paddingBottom="20rem"
+                  top="0"
                 >
                   {sections.map((section) => (
                     <ScrollLink
@@ -163,8 +168,8 @@ const Navbar = () => {
                       onMouseLeave={() => handleHover(null)}
                       className={`${
                         activeLink === section.id
-                          ? 'selected'
-                          : 'idle'
+                          ? 'selectedy'
+                          : 'slinky'
                       }`}
                       to={`${section.id}-section`}
                       smooth={true}

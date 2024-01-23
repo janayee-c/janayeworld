@@ -1,6 +1,7 @@
 import { Container, useMediaQuery, Flex } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import '../styles/Hero.css';
+import { Heading } from '../components/export.js'
 import { Me, Blur} from '../images/export.js';
 
 const Hero = () => {
@@ -14,9 +15,9 @@ const Hero = () => {
 
     if (isMinimizedMode) {
       if (scrollY > prevScrollY) {
-        // Scrolling down, translate the image up by 20px
+        // Scrolling down, translate the image up by 30px
         
-        meElement.style.transform = 'translateY(-80px)';
+        meElement.style.transform = 'translateY(-30px)';
 
         setScrollDirection('down');
       } else {
@@ -46,9 +47,12 @@ const Hero = () => {
       <Flex 
       className="me-container"
       flexDirection={'row'}
-      justifyContent="flex-start"
       >
+      
+        <div className="overlay-text"> hello <br></br>&nbsp;&nbsp;hello</div>
+        <Flex className="circle-container fade">
         <img id="me" src={Me} alt="a picture of me" />
+        </Flex>
       </Flex>
       <div className="hero-diag"></div>
     </section>

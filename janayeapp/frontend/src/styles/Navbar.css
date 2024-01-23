@@ -8,44 +8,64 @@
     background-color: var(--navbarblue); 
 }
 
-.selected {
+.slinky {
+    font-size: 2.5em;
+    color: var(--black)
+}
+
+.slinkx {
+    color: var(--primary);
+    font-family: 'Larsseit';
+    font-weight: 400;
+    font-size: 1.3rem; /* Default font size */
+}
+
+
+.selectedx {
+    color: var(--ponyored);
+    font-family: 'Larsseit';
+    font-weight: 400;
+    font-size: 1.3rem; /* Default font size */
+    justify-self: right;
+
+}
+
+.selectedy {
     font-size: 2.5em;
     color: var(--ponyored)
 
 }
 
-.idle {
-    font-size: 2.5em;
-    color: var(--black)
-}
-
-.slink {
-    color: var(--primary);
-    font-family: 'Larsseit';
-    font-weight: 400;
-    text-indent: 1.25em;
-    font-size: 1.3rem; /* Default font size */
-    justify-self: right;
-}
-
 /* For extra small screens */
 @media (max-width: 575px) {
-    .slink {
+    .slinkx {
         font-size: 2em; 
     }
+    .selectedx {
+        font-size: 2em;
+    }
+    
 }
 
 /* For medium screens */
 @media (min-width: 768px) {
-    .slink {
+    .slinx {
         font-size: 1.5em;
+    }
+    .selectedx {
+        font-size: 1.5em;
+    
     }
 }
 
 /* For large screens */
 @media (min-width: 992px) {
-    .slink {
+    .slinkx {
         font-size: 1.75em; /* Corrected syntax */
+    }
+    .selectedx {
+        font-size: 1.75em;
+    
     }
 }
 
