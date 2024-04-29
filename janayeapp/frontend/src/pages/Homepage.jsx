@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Homepage.css';
-import { Contact, Hero, Navbar, Projects, Skills, SplashScreen } from '../components/export';
+import { Contact, Hero, Navbar, Projects, Skills, SplashScreen, Intro } from '../components/export';
 import { useMediaQuery } from '@chakra-ui/react';
 
 function Homepage() {
@@ -17,6 +17,7 @@ function Homepage() {
           <>
             <Navbar />
             <Hero />
+            <Intro/>
             <Projects />
             <Skills />
             <Contact />

@@ -1,16 +1,17 @@
 const express = require('express')
 const cors = require('cors');
 const app = express();
-const projectRoutes = require('../server/routes/projectRoutes')
-
 app.use(cors());  
+app.use(express.json());
 
+const projectRoutes = require("./routes/projectRoutes")
 
 
 //defining HTTP requests 
-
-app.get("/api", (req, res) => {
-    res.json({"users": ["userOne", "userTwo", "userThree"]});
+app.get("/", (req, res) => {
+    res.send({"name": "Janaye App"}) // Should be json format
 });
 
-app.listen(5000, () => {console.log("Server is running on port 5000!")})
+app.use('/api', projectRoutes);
+
+app.listen(3001, () => {console.log("Server is running on port 3001!")})

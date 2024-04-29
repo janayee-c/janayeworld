@@ -1,7 +1,7 @@
 import { Container, useMediaQuery, Flex } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import '../styles/Hero.css';
-import { Heading } from '../components/export.js'
+import { Heading, ProfileCard } from '../components/export.js'
 import { Me, Blur} from '../images/export.js';
 
 const Hero = () => {
@@ -54,7 +54,15 @@ const Hero = () => {
         <img id="me" src={Me} alt="a picture of me" />
         </Flex>
       </Flex>
-      <div className="hero-diag"></div>
+
+      <Flex 
+      className="about-me-container"
+      flexDirection={'vertical'}
+      >
+        
+        <ProfileCard></ProfileCard>
+
+      </Flex> 
     </section>
   );
 };

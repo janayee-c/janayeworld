@@ -1,0 +1,9 @@
+#intro-section {
+    position: relative;
+    background-color: rosybrown;
+    height: 30em; 
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    z-index: 1;
+}

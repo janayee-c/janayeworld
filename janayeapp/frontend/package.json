@@ -7,7 +7,7 @@
       "localhost",
       ".localhost"
     ],
-    "proxy": "https://localhost:5000/"
+    "proxy": "https://localhost:3001/"
   },
   "dependencies": {
     "@babel/plugin-transform-private-property-in-object": "^7.23.4",
